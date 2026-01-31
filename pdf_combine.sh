@@ -24,7 +24,7 @@ if pdfunite "${files[@]}" "${name}.pdf"; then
     echo "Converted ${#files[@]} files into ${name}.pdf"
     
     # Remove originals only if merge succeeded
-    rm -- "$dir"/*.pdf
+    # rm -- "$dir"/*.pdf
     
     # Move the merged PDF back
     mv -- "${name}.pdf" "${dir}/${name}.pdf"
