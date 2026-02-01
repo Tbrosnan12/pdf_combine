@@ -47,7 +47,9 @@ if pdftk "${files[@]}" cat output merged.pdf; then
     echo "Converted ${#files[@]} files to ${name}.pdf"
     pdftk merged.pdf update_info ${dir}/bookmarks.txt output "${name}.pdf"
     echo "Added Table of Contents"
-    
+
+    rm ${dir}/bookmarks.txt    
+    rm merged.pdf
     # Remove originals only if merge succeeded
     # rm -- "$dir"/*.pdf
     
@@ -55,6 +57,7 @@ if pdftk "${files[@]}" cat output merged.pdf; then
      mv -- "${name}.pdf" "${dir}/${name}.pdf"
 else
     echo "Error: pdftk failed"
+    rm ${dir}/bookmarks.txt 
     exit 1
 fi
 
