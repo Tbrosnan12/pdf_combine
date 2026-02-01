@@ -54,7 +54,7 @@ if pdftk "${files[@]}" cat output merged.pdf; then
     # Move the merged PDF into the directory
      mv -- "${name}.pdf" "${dir}/${name}.pdf"
 else
-    echo "Error: pdfunite failed"
+    echo "Error: pdftk failed"
     exit 1
 fi
 
