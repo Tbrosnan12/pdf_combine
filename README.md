@@ -16,5 +16,8 @@ bash /path/to/pdf_combine.sh <directory> <output_name>
 Permissions may have to be given to `pdf_combine.sh` to run it.
 
 # Dependencies
-[pdfunite](https://github.com/mtgrosser/pdfunite/tree/master)
+## pdfunite
+```
+sudo apt-get install poppler-utils
+```
 Note pdfunite already comes with most standard distros, you can check if it is installed with `pdfunite --version`. This script has been tested on pdfunite version 24.02.0,
