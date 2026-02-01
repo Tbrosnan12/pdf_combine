@@ -16,13 +16,11 @@ bash /path/to/pdf_combine.sh <directory> <output_name>
 Permissions may have to be given to `pdf_combine.sh` to run it.
 
 # Dependencies
-<<<<<<< HEAD
-## pdfunite
+## pdftk
+With apt:
 ```
-sudo apt-get install poppler-utils
+sudo apt install -y pdftk
 ```
-=======
-[pdfunite](https://github.com/mtgrosser/pdfunite/tree/master)
+Note the package isn’t available in Fedora’s official package repository (See https://www.baeldung.com/linux/install-pdftk for other download options)
+Or the Pdftk site https://pkgs.org/download/pdftk. 
 
->>>>>>> fd7a052e4247c556a05db70892474eff8f8c2924
-Note pdfunite already comes with most standard distros, you can check if it is installed with `pdfunite --version`. This script has been tested on pdfunite version 24.02.0,
