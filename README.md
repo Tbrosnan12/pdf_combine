@@ -1,6 +1,6 @@
 # Pdf Combine
 
-Makes use of the pdfunite tool to combine a directory of pfds into one
+Makes use of the pdftk tool to combine a directory of pfds into one, now with added Table of Contents generator based on sub pdfs.
 
 Note currently the line that deletes the left over files `rm -- "$dir"/*.pdf` is commented out, you can un-comment this but at your own risk of misusage!
 
